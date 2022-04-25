@@ -1,0 +1,864 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+@import url('https://fontawesome.com/');
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+}
+
+.navbar{
+  padding: .8rem;
+  background-color: #e54d26;
+}
+
+.collapse.navbar-collapse{
+  background-color: #fab324;
+}
+
+.navbar-brand img{
+  height: 90px;
+}
+
+.navbar-nav li {
+  padding-right: 20px;
+}
+
+.nav-link{
+  font-size: 1.1em !important;
+}
+
+ul.login_search {
+  text-align: center;
+}
+
+ul.login_search li {
+  padding: 0px 9px;
+  display: inline-block;
+}
+
+ul.emalogin_searchil li:last-child {
+  padding-right: 10;
+}
+
+ul.login_search li a {
+  text-transform: uppercase;
+  font-size: 1.5em !important;
+  text-decoration: none;
+  color: rgba(79, 72, 72, 0.824);
+}
+
+ul.login_search li a img {
+  padding-left: 5px;
+}
+
+.navigation.navbar-light .navbar-nav .nav-link {
+     padding: 0px 30px;
+     color: rgba(79, 72, 72, 0.824);
+     font-size: 17px;
+     line-height: 20px;
+     font-weight: 400;
+     border-radius: 30px;
+     text-transform: uppercase;
+}
+
+.navigation.navbar-light .navbar-nav .nav-link:focus,
+.navigation.navbar-light .navbar-nav .nav-link:hover {
+     color: #111111;
+}
+
+.navigation.navbar-light .navbar-nav .active>.nav-link,
+.navigation.navbar-light .navbar-nav .nav-link.active,
+.navigation.navbar-light .navbar-nav .nav-link.show,
+.navigation.navbar-light .navbar-nav .show>.nav-link {
+     color: #111111;
+}
+
+/** end nav bar **/
+
+.jumbotron {
+  padding-top: 0px;
+  border-radius: 0;
+}
+
+.padding{
+  padding-bottom: 20px;
+}
+
+.fa-code {
+  color: #e54d26;
+}
+
+.fa-bold {
+  color: #563d7c;
+}
+
+.fa-css3 {
+  color: #2163af;
+}
+
+.fa-solid.fa-cat,
+.fa-solid.fa-syringe,
+.fa-solid.fa-paw{
+  font-size: 8em;
+  color: #fab324;
+}
+
+.readMore{
+  color: #e54d26;
+}
+
+.fa-code, .fa-bold, .fa-css3 {
+  font-size: 4em;
+  margin: 1rem;
+}
+
+.fun {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.gif {
+  max-width: 100%;
+}
+
+.social a {
+  font-size: 4.5em;
+  padding: 3rem;
+}
+.fa-facebook {
+  color: #3b5998;
+}
+
+.fa-twitter {
+  color: #00aced;
+}
+
+.fa-google-plus-g {
+  color: #dd4b39;
+}
+
+.fa-instagram {
+  background-image: linear-gradient(25deg,#FFDC80,#FCAF45,#F77737,#F56040,	#FD1D1D,#E1306C,#C13584,#833AB4);
+  border-radius: 22px;
+  color: #ffffffe9;
+}
+
+.fa-youtube {
+  color: #bb0000;
+}
+
+.fa-facebook:hover,
+.fa-twitter:hover,
+.fa-google-plis-g :hover,
+.fa-instagram :hover,
+.fa-youtube :hover{
+color: #d5d5d5;
+}
+
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+/** flip card **/
+.flipcard {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 348px;
+  height: 300px;
+}  
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.flipcard:hover .content {
+  transform: rotateY( 180deg ) ;
+  transition: transform 0.5s;
+}
+
+.front,
+.back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: white;
+  line-height: 300px;
+  color: #fab324;
+  text-align: center;
+  font-size: 29px;
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+
+.back {
+  background: #e54d26;
+  color: white;
+  transform: rotateY( 180deg );
+}
+
+footer{
+  background-color: #3f3f3f;
+  color: #d5d5d5;
+  padding-top: 2rem;
+}
+
+footer a{
+  color: #d5d5d5;
+}
+
+
+/** banner_main **/
+.banner_main {
+  background:url(img/cover.jpg);
+  width: 100%;
+  background-size: cover;
+  position: relative;
+  height: 900px; 
+  background-position: center;
+  filter:drop-shadow(1px 8px 7px #0000003b);
+}
+.section {position: relative;}
+.section::before {
+    position: absolute;
+    content: "";
+    bottom: 0%;
+    background: url(img/logo_transparent.png);
+    background-repeat: no-repeat;
+    left: 0px;
+    width: 416px;
+    height: 100%;
+    bottom: 0;
+    background-position: center;
+}
+.section::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    background: url(img/logo_transparent.png);
+    background-repeat: no-repeat;
+    right: 0px;
+    width: 416px;
+    height: 100%;
+    bottom: 0;
+    background-position: center;
+}
+.bluid {
+     padding-top: 150px;
+     text-align: center;
+}
+.banner_main .bluid h1 {
+     color: #fff;
+     font-size: 90px;
+     line-height: 90px;
+     font-weight: bold;
+     padding-bottom: 20px;
+}
+.banner_main .bluid p {
+     color: #fff;
+     line-height: 25px;
+     font-weight: 500;
+     font-size: 17px;
+}
+
+.banner_main .bluid .read_more {
+     margin-right: 5px;
+}
+
+/** About **/
+.pet {
+  background:url(img/aboutDogCat.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 90px 0;
+  margin-top: 90px;
+  position: relative;
+}
+.pet .titlepage {
+   padding-bottom: 0;
+}
+
+.pet .titlepage h2 {
+  color: #a71818;
+  padding-bottom: 60px;
+  padding-top: 40px;
+}
+
+  /** catCare **/
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 900px;
+    margin-block: 2rem;
+    gap: 2rem;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    width:  clamp(150px, 50%, 300px);
+    overflow: hidden;
+    box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 1em;
+    background: #ECE9E6;
+  background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+  }
+  .card__body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+  .card__body h4 {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+  }
+  .card__footer {
+    display: flex;
+    padding: 1rem;
+    margin-top: auto;
+  }
+  .user__info {
+    color: #666;
+  }
+  .btn_primary {
+    border: none;
+    outline: none;
+    background: linear-gradient(90deg, #ff9966, #ff5e62);
+    padding: .7rem 1rem;
+    border-radius: 40px;
+    color: white;
+    font-size: 1.2rem;
+    box-shadow: 1px 10px 2rem rgba(255, 94, 98, 0.5);
+    transition: all .2s ease-in;
+    margin-left: 5.4rem;
+  }
+  .btn_primary:hover {
+    box-shadow: 0px 5px 1rem rgba(255, 94, 98, 0.5);
+    text-decoration: none;
+  }
+  
+  /** service **/
+  .services {position: relative;}
+  .services::before {
+    position: absolute;
+    content: "";
+    bottom: -20%;
+    background: url(img/pla.png);
+    background-repeat: no-repeat;
+    right: 0px;
+    width: 261px;
+    height: 212px;
+}
+.services::after {
+    position: absolute;
+    content: "";
+    top: 23%;
+    background: url(img/pla.png);
+    background-repeat: no-repeat;
+    left: 0px;
+    width: 261px;
+    height: 212px;
+}
+  .titlepage {
+    padding-bottom: 60px;
+}
+
+.titlepage h2 {
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 55px;
+    color: #2e2e2e;
+    position: relative;
+    z-index: 99;
+}
+
+.service_text {
+  text-align: center;
+  margin-top: 30px;
+  box-shadow:3px 0 62px rgba(13, 3, 3, 0.10);
+  background: #fff;
+  padding: 60px 30px 30px 30px;
+  position: relative;
+  z-index: 99;
+}
+
+.service_text h3 {
+ color: #232222;
+ font-size: 17px;
+ line-height: 20px;
+ padding-top: 32px;
+ font-weight: 500;
+}
+
+.service_text p {
+ padding-top: 21px;
+ padding-bottom: 31px;
+}
+
+.fa-light.fa-dog-leashed{
+  background-color: #00aced;
+}
+
+.PageTitle {
+  padding-top: 1px;
+}
+
+/** title name **/
+.titlepage {
+  padding-bottom: 1px;
+}
+
+.PageTitle .titlepage h2 {
+  text-align: center;
+  margin-bottom: 1px;
+}
+
+/** end our_fishs **/
+
+
+/** blog section **/
+.blog_img figure {
+  margin: 0;
+}
+
+.blog_img figure img {
+  width: 100%;
+  box-shadow: 0 0 19px rgba(107, 41, 41, 0.1);
+}
+
+.fer {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: -60px;
+}
+
+.fer span {
+  background: #ff0000;
+  display: block;
+  text-align: left;
+  padding: 25px 15px;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.blog_box h3 {
+  color: #fff;
+  font-size: 30px;
+  line-height: 35px;
+  font-weight: bold;
+  margin-top: 45px;
+}
+
+.blog_box p {
+  font-size: 17px;
+  line-height: 35px;
+  padding: 30px 0 15px 0;
+}
+
+.blog_box strong {
+  font-weight: bold;
+  font-size: 17px;
+  padding-bottom: 10px;
+  display: block;
+}
+
+.blog_box ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 9;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.blog_box ul li {
+  display: inline-block;
+  color: #fff;
+}
+
+.blog_box ul li a {
+  display: inline-block;
+  color: #fff;
+  font-size: 17px;
+}
+
+.blog_box ul li a:hover {
+  color: #f22e15;
+}
+
+.blog_box ul li a img {
+  padding-left: 14px;
+}
+
+.fist_sec {
+  padding: 10px 40px;
+  background: #d69393;
+  margin-bottom: 30px;
+}
+
+/** customer rating **/
+#feedback {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.feedback-heading{
+  letter-spacing: 1px;
+  margin: 30px 0px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.feedback-heading h1 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  background-color: #fab324;
+  color: #FFFFFF;
+  padding: 10px 20px;
+}
+
+.feedback-heading span{
+  font-size: 1.3rem;
+  color: #252525;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.feedback-box-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.feedback-box {
+  width: 500px;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+  background-color: #FFFFFF;
+  padding: 20px;
+  margin: 15px;
+  cursor: pointer;
+}
+
+.profile-img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.profile-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.profile{
+  display: flex;
+  align-items: center;
+}
+
+.name-user {
+  display: flex;
+  flex-direction: column;
+}
+
+.name-user strong{
+  color: #3d3d3d;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.name-user span{
+  color: #979797;
+  font-size: 0.8rem;
+}
+
+.reviews{
+  color: #f9d71c;
+}
+
+.box-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.client-comment p{
+font-size: 0.9rem;
+color: #4b4b4b;
+}
+
+.feedback-box:hover {
+  transform: translateY(-10px);
+  transition: all ease 0.3s;
+}
+
+/*-- dogs --*/
+/* Background properties and 
+         transition effect to section */
+         .dogs {
+          height: 88vh;
+          width: 400px;
+          cursor: pointer;
+          flex: 0.2;
+          margin: 3px;
+          position: relative;
+          transition: all 0.7s ease-out;
+          box-sizing: border-box;
+          box-shadow: 0 5px 10px rgb(225, 236, 71);
+          flex-wrap: wrap;
+      }
+
+      /* section with active class will
+       grow flex to 3 times */
+      .dogs:hover {
+          flex: 3;
+      }
+
+      .dog-pic {
+          position: relative;
+          width: 126px;
+          height: 150px;
+      }
+
+      .tab {
+          border-collapse: collapse;
+      }
+
+      td {
+          padding: 0px;
+      }
+
+      .dogs .con-tent {
+          visibility: visible;
+          opacity: 0;
+          transition: 0.3s ease-in-out;
+      }
+
+      .dogs:hover .con-tent {
+          visibility: visible;
+          opacity: 1;
+          transition-delay: 0.1s;
+      }
+
+/*---Media Queries --*/
+@media(max-width:1060px){
+  .feedback-box{
+    width: 45%;
+    padding: 10px;
+  }
+}
+
+@media(max-width:790px){
+  .feedback-box{
+    width: 100%;
+  }
+  .feedback-heading h1{
+font-size: 1.4rem;
+  }
+}
+
+@media(max-width:340px) {
+  .box-top{
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+.reviews{
+  margin-top: 10px;
+}
+}
+::selection{
+  color: #FFFFFF;
+  background-color: #252525;
+}
+
+@media (max-width: 992px) {
+.social a {
+  font-size: 4em;
+  padding: 2rem;
+}
+  }
+@media (max-width: 768px) {
+  .display-4{
+    font-size: 200%;
+  }
+
+  .social a {
+    font-size: 2.5em;
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-caption{
+    top: 40%;
+  }
+  .carousel-caption h1{
+    font-size: 250%;
+  }
+  .carousel-caption h3 {
+    font-size: 110%;
+  }
+  .carousel-caption .btn {
+    font-size: 90%;
+    padding: 4px 8px;
+  }
+.carousel-indicators{
+  display: none;
+}
+.display-4{
+  font-size: 160%;
+}
+.social a {
+  font-size: 2em;
+  padding: .7rem;
+}
+
+
+}
+
+
+
+
+
+/*--- Fixed Background Image --*/
+figure {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  margin: 0!important;
+}
+.fixed-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#fixed {
+  background-image: url('img/CatDog.jpg');
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
+}
+/*--- Bootstrap Padding Fix --*/
+[class*="col-"] {
+    padding: 1rem;
+}
+
+
+
+
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
+
+
+
+
+
+
+
+

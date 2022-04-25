@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- <head>
+
+	<title>Complete Bootstrap 4 Website Layout</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head> -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pet Adoption Station</title>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <script>
+        function calTotal() {
+            var unit = document.getElementsByName("unit[]");
+            var quantity = document.getElementsByName("quantity[]");
+            var amount = document.getElementsByName("amount[]");
+            var cboxes = document.getElementsByName("item[]");
+            var cboxes = document.getElementsByName("item[]");
+            var promocode_name = document.getElementById("promocode_name");
+            var subtotal = 0;
+            var discount = 0;
+            var len = cboxes.length; //get number of checkbox
+            for (var i = 0; i < len; i++) {
+                if (cboxes[i].checked) { //run if check box checked
+                    var u = parseFloat(unit[i].value);
+                    var q = parseFloat(quantity[i].value);
+                    var a = u * q;
+                    subtotal = subtotal + a;
+                    document.getElementsByName("amount[]")[i].value = a;
+                }
+                else {
+                    document.getElementsByName("amount[]")[i].value = 0;
+                }
+            }
+            var subtotal = parseFloat(document.getElementById("subtotal").value = subtotal);
+            var sst = 0;
+            var total = 0;
+            sst = subtotal * 0.06;
+            if (promocode_name.value === 'Petfinder') {
+                discount = subtotal * 0.05
+                discount = discount.toFixed(2);
+                total = subtotal + sst - discount;
+                document.getElementById("discount").value = '-' + discount;
+            } else {
+                total = subtotal + sst;
+                document.getElementById("discount").value = '-0';
+            }
+            total = total.toFixed(2);
+            sst = sst.toFixed(2); //make result to two decimal place
+            console.log(subtotal);
+            document.getElementById("sst").value = sst;
+            document.getElementById("total").value = total;
+        }
+
+        function calAmount() {
+            var unit = document.getElementsByName("unit[]");
+            var quantity = document.getElementsByName("quantity[]");
+            var amount = document.getElementsByName("amount[]");
+            var cboxes = document.getElementsByName("item[]");
+            var len = cboxes.length; //get number of checkbox
+            for (var i = 0; i < len; i++) {
+                var u = parseFloat(unit[i].value);
+                var q = parseFloat(quantity[i].value);
+                var a = u * q;
+                document.getElementsByName("amount[]")[i].value = a;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navigation navbar-expand-md navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+
+
+            <div class="collapse navbar-collapse row" id="navbarReesponsive">
+                <div class="col">
+                    <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="col-6">
+                    <div class="row justify-content-center">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="category.html" id="navbarDropdown"
+                                    role="button" data-toggle="dropdown" aria-expanded="false">
+                                    All Pet Care
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="dogCare.html">Dog Care</a>
+                                    <a class="dropdown-item" href="catCare.html">Cat Care</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="helpingPet.html">Helping Pets</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row justify-content-end">
+                        <ul class="login_search text_align_right">
+                            <li><a href="Javascript:void(0)">Login <img src="img/user_icon.png" alt="#" /></a></li>
+                            <li><a href="Javascript:void(0)"><img src="img/search.png" alt="#" /></a></li>
+                            <li><a href="readMore.html"><img src="img/sho.png" alt="#" /><span
+                                        class="badge badge-danger">2</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    </div>
+
+    <!-- Grooming Page-->
+    <div class="PageTitle">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage text_align_center ">
+                        <h2>SHEARS</h2>
+                        <p style="text-align: center;">Pet Grooming Shears</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h5>Just like barbers, dog groomers need to use scissors, or shears, that are specifically designed for cutting
+            dog hair. Not only will it be easier and more successful to use the right type of shears, it will be safer
+            for the groomer and the animal. There are three main types of shears – straight blades, curved blades and
+            thinning shears. The first two are traditional scissor-types but differ in the shape of blade and, thus the
+            application. Thinning shears are used to either thin or blend very thick coats into a more manageable
+            texture and shape. These shears may have other varying characteristics as well, such as being appropriate or
+            left-handed cutting, having a projecting guard for better grip, and having a ball-shaped tip for safety when
+            trimming the facial area. No matter what type of shears you are looking for – or if you are looking for a
+            comprehensive shears kit, or Sensei Shears, PetEdge carries a variety of types and brands that will suit you
+            wonderfully!</h5>
+        <div class="card" style="width: 18rem; color: #e54d26; border-color: #fab324;">
+            <img src="img/grooming_1.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Straight Dog Grooming Shears</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem; color: #e54d26; border-color: #fab324;">
+            <img src="img/grooming_2.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Cat Grooming Shear Kits</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem; color: #e54d26; border-color: #fab324;">
+            <img src="img/grooming_3.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Specialty Dog/Cat Grooming Shears</p>
+            </div>
+        </div>
+        <div class="row">
+            <h2>Lets Make a Payment now! :]</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">No.</th>
+                        <th scope="col"></th>
+                        <th scope="col">Product</th>
+                        <th scope="col">Unit Price</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Amount ($)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1.</th>
+                        <td><input type="checkbox" name="item[]" value="" onclick="calTotal()"></td>
+                        <td>Straight Dog Grooming Shears</td>
+                        <td>$100.19 <input type="hidden" name="unit[]" id="unit[]" value="100.19"></td>
+                        <td><input type="number" name="quantity[]" id="quantity[]" value="1" min="1"
+                                onchange="calAmount()">
+                        </td>
+                        <td><input type="number" name="amount[]" id="amount[]" value=">$100.19" readonly></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2.</th>
+                        <td><input type="checkbox" name="item[]" value="" onclick="calTotal()"></td>
+                        <td>Cat Grooming Shear Kits</td>
+                        <td>$149.95 <input type="hidden" name="unit[]" id="unit[]" value="149.95"></td>
+                        <td><input type="number" name="quantity[]" id="quantity[]" value="1" min="1"
+                                onchange="calAmount()">
+                        </td>
+                        <td><input type="number" name="amount[]" id="amount[]" value="$149.95" readonly></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3.</th>
+                        <td><input type="checkbox" name="item[]" value="" onclick="calTotal()"></td>
+                        <td>Specialty Dog/Cat Grooming Shears</td>
+                        <td>$179.99 <input type="hidden" name="unit[]" id="unit[]" value="179.99"></td>
+                        <td><input type="number" name="quantity[]" id="quantity[]" value="1" min="1"
+                                onchange="calAmount()">
+                        </td>
+                        <td><input type="number" name="amount[]" id="amount[]" value="$179.99" readonly></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Subtotal</td>
+                        <td><input type="number" id="subtotal" name="subtotal" value="" readonly></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">SST %</td>
+                        <td><input type="number" id="sst" name="sst" value="" readonly></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">promocode (5%) <input type="text" id="promocode_name" name="promocode_name"
+                                value="" placeholder="petfinder"></td>
+                        <td><input type="number" id="promocode" name="promocode" value="" readonly></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">
+                            <button class="btn btn-danger" onclick="calTotal()">Buy Now</button>
+                        </td>
+                        <td><input name="total" id="total" type="number" value="" readonly></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!--- Footer -->
+    <!--- Footer -->
+    <footer>
+        <div class="container-fluid padding">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <img src="img/logoTransparent.png" alt="" style="height: 80px; width: 80px;">
+                    <hr class="light">
+                    <p>+2342 5446 66 </p>
+                    <p>email@petAdoptionStation.com</p>
+                    <p>
+                        PO BOX Collins Street West
+                    </p>
+                    <p>City, State, 00000</p>
+                </div>
+                <div class="col-md-4">
+                    <hr class="light" style="padding-top: 5px;">
+                    <h3 style="padding-bottom: 10px;">Our Hours</h3>
+                    <hr class="light">
+                    <p>Monday: 9am - 5pm</p>
+
+                    <p>Saturday: 10am - 4pm</p>
+                    <p>Sunday: closed</p>
+                </div>
+                <div class="col-md-4">
+                    <hr class="light" style="padding-top: 5px;">
+                    <h3 style="padding-bottom: 10px;">Our Location</h3>
+                    <hr class="light">
+                    <p>2345 South Road, Green Meadows VIC 3977
+                        Only 45 mins from Melbourne CBD</p>
+                </div>
+                <div class="col-12">
+                    <hr class="light-100">
+                    <h5>&copy; petfinder.com</h5>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    </script>
+</body>
+
+</html>
