@@ -1,6 +1,7 @@
 # project_petfinder
 Main menu page
-![image](https://user-images.githubusercontent.com/88666770/169228143-dced793d-3301-4fff-beae-c81715783b2a.png)
+![image](https://user-images.githubusercontent.com/88666770/169228316-b405665e-b357-4a29-8a93-832a11c08404.png)
+
 
 
 
