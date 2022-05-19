@@ -1,24 +1,33 @@
 # project_petfinder
 Main menu page
-![image](https://user-images.githubusercontent.com/88666770/169226464-a892eeb1-4be0-48e4-9617-afbb0fde82b8.png)
+![image](https://user-images.githubusercontent.com/88666770/169227854-e0f59ea0-615a-45ae-a2a5-76eb1d148f64.png)
+
+
 
 About page
 ![image](https://user-images.githubusercontent.com/88666770/169226534-c5babdba-b152-4395-bc5b-93195125f720.png)
 
+
 Dog care page
 ![image](https://user-images.githubusercontent.com/88666770/169226596-3acb8d64-b979-4ce7-9e25-386795fe16c1.png)
+
 After clicking read more buttom
 ![image](https://user-images.githubusercontent.com/88666770/169226809-4c9b4af9-ee2e-4a9c-9497-b9bc26d3a53c.png)
 ![image](https://user-images.githubusercontent.com/88666770/169226871-026478a5-d84d-485e-8a89-59db2beb94dd.png)
 
+
 Cat care page
 ![image](https://user-images.githubusercontent.com/88666770/169226933-1147070a-b03f-40e9-be5f-0e5cfaa8ed96.png)
+
 After clicking read more buttom
 ![image](https://user-images.githubusercontent.com/88666770/169226990-85c73ecd-2302-48a9-b7e8-667537dc2615.png)
 ![image](https://user-images.githubusercontent.com/88666770/169227045-089a16c5-92d9-43f5-bc5b-0b4bc17bfd8c.png)
 
+
 Helping pets page
 ![image](https://user-images.githubusercontent.com/88666770/169227136-8026f4cb-3c0c-4bc4-bab4-0156f667ec65.png)
+
+
 
 access to SHEARS page
 from:
